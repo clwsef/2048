@@ -59,6 +59,9 @@ document.addEventListener('keyup',(e)=>{
     document.querySelector('#score').innerText=score
 })
 
+function filterZero(row){
+    return row.filter(num=>num!=0)  //new arr without 0
+}
 
 function slide(row){
     row = filterZero(row) //[0,2,2,2]=>[2,2,2]
