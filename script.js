@@ -25,6 +25,23 @@ function setGame(){
     setTwo()
 }
 
+function setTwo(){
+    if (!hasEmptyTile()){
+        return
+    }
+    let found=false
+    while (!found){
+        let r=Math.floor(Math.random()*rows) //Math.random() - выдает число между 0-1(мб десятичным)
+        let c=Math.floor(Math.random()*columns)  //Math.floor() - деалет десятичное число целым
+        if (board[r][c]==0){
+            board[r][c]=2
+            let tile=document.getElementById(r.toString()+'-'+c.toString())
+            tile.innerText='2'
+            tile.classList.add('x2')
+            found=true
+        }
+    }
+}
 
 function updateTile(tile,num){
     tile.innerText=''
