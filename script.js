@@ -24,7 +24,16 @@ function setGame(){
     setTwo()
     setTwo()
 }
-
+function hasEmptyTile(){
+    for (let r=0;r<rows;r++){
+        for (let c=0;c<columns;c++){
+            if (board[r][c]==0){
+                return true
+            }
+        }
+    }
+    return false
+}
 function setTwo(){
     if (!hasEmptyTile()){
         return
