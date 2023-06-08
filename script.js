@@ -24,3 +24,16 @@ function setGame(){
     setTwo()
     setTwo()
 }
+function updateTile(tile,num){
+    tile.innerText=''
+    tile.classList.value=''
+    tile.classList.add('tile')
+    if (num>0){
+        tile.innerText=num  //innerText позволяет считывать или задавать текстовое содержимое элемента
+        if (num<=4096){
+            tile.classList.add('x'+num.toString())
+        } else{
+            tile.classList.add('x8192')
+        }
+    }
+}
